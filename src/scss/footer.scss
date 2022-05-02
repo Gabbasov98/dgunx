@@ -1,0 +1,102 @@
+@import "vars";
+.footer {
+    padding: 65px 0 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05);
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+    }
+    &__logo {
+        width: 171px;
+        display: block;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__address {
+        font-size: 14px;
+        line-height: 130%;
+        margin-top: 20px;
+    }
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 132px;
+        margin-left: 166px;
+    }
+    &__link {
+        display: block;
+        font-size: 16px;
+        line-height: 19px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &:hover {
+            color: $blue;
+        }
+    }
+    &__contacts {
+        text-align: right;
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        &-title {
+            font-size: 16px;
+            line-height: 130%;
+            color: #818181;
+        }
+        &-link {
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 600;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    &__privacy {
+        margin-top: 83px;
+        font-size: 14px;
+        line-height: 130%;
+        color: #797979;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        &__links {
+            gap: 50px;
+            margin-left: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        padding: 34px 0 18px;
+        &__inner {
+            display: block;
+        }
+        &__left {
+            display: block;
+        }
+        &__links {
+            gap: 35px;
+            margin: 62px 0 0;
+        }
+        &__contacts {
+            margin-top: 26px;
+            text-align: left;
+        }
+        &__privacy {
+            margin-top: 40px;
+        }
+    }
+}
